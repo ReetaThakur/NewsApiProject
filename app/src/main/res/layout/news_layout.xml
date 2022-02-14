@@ -25,6 +25,15 @@
             android:id="@+id/tvNewsSource"
             app:layout_constraintStart_toEndOf="@+id/tvNewsTiming"
             app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="20dp"
+            android:layout_marginStart="100dp"
+            android:id="@+id/newsImage"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,14 +42,16 @@
             android:id="@+id/tvNewsTitle"
             android:textColor="@color/hintColor"
             android:textStyle="bold"
-            android:textSize="30sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvNewsTiming"/>
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:textColor="#639DD1"
             android:layout_marginStart="15dp"
             android:id="@+id/tvNewsDescription"
