@@ -17,12 +17,14 @@ import com.reeta.newsproject.viewModel.NewsViewModel
 import com.reeta.triveouscryptocurrencyassignment.apiResponse.Resource
 import kotlinx.android.synthetic.main.activity_main.*
 
+/*
+This is main activity for managing all Ui related views.
+ */
 class MainActivity : AppCompatActivity() {
 
     var newsList = mutableListOf<Article>()
     lateinit var newsAdapter: NewsAdapter
     lateinit var repository: Repository
-    lateinit var newsFactory: NewsFactory
     lateinit var viewModel: NewsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
