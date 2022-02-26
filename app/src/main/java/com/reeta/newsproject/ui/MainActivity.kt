@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProviders
@@ -26,9 +27,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var newsAdapter: NewsAdapter
     lateinit var repository: Repository
     lateinit var viewModel: NewsViewModel
+    lateinit var searchedItem:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        searchedItem= findViewById(R.id.showSearchedItem)
         repository = Repository()
         viewModel = ViewModelProviders.of(this, NewsFactory(repository))
             .get(NewsViewModel::class.java)
@@ -60,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         if (filterList.isEmpty()) {
 
         } else {
+            searchedItem.text = "Total ${filterList.size} News"
             newsAdapter.filterList(filterList)
         }
     }
